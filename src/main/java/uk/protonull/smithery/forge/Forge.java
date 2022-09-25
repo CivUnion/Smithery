@@ -14,7 +14,7 @@ import org.bukkit.inventory.InventoryHolder;
 import org.jetbrains.annotations.NotNull;
 import uk.protonull.smithery.utilities.AmountMap;
 import uk.protonull.smithery.utilities.Utilities;
-import vg.civcraft.mc.civmodcore.serialization.NBTCompound;
+import vg.civcraft.mc.civmodcore.nbt.wrappers.NBTCompound;
 
 public final class Forge implements InventoryHolder {
 
@@ -136,7 +136,7 @@ public final class Forge implements InventoryHolder {
         final var nbt = new NBTCompound();
         // Save ingredients
         final NBTCompound ingredientNBT = Utilities.getOrCreateCompound(nbt, INGREDIENTS_KEY);
-        getIngredients().forEach(ingredientNBT::setInteger);
+        getIngredients().forEach(ingredientNBT::setInt);
         // Save time of last insert
         nbt.setLong(TIME_KEY, getTimeOfLastIngredientInsert());
         // Save inventory
@@ -156,7 +156,7 @@ public final class Forge implements InventoryHolder {
         final NBTCompound ingredientNBT = nbt.getCompound(INGREDIENTS_KEY);
         if (ingredientNBT != null) {
             for (final String ingredient : ingredientNBT.getKeys()) {
-                ingredients.put(ingredient, ingredientNBT.getInteger(ingredient));
+                ingredients.put(ingredient, ingredientNBT.getInt(ingredient));
             }
             ingredients.removeEmpties();
         }

@@ -14,8 +14,9 @@ import org.bukkit.persistence.PersistentDataType;
 import org.jetbrains.annotations.NotNull;
 import uk.protonull.smithery.Smithery;
 import uk.protonull.smithery.utilities.Utilities;
-import vg.civcraft.mc.civmodcore.serialization.NBTCompound;
-import vg.civcraft.mc.civmodcore.util.CivLogger;
+import vg.civcraft.mc.civmodcore.nbt.NBTSerialization;
+import vg.civcraft.mc.civmodcore.nbt.wrappers.NBTCompound;
+import vg.civcraft.mc.civmodcore.utilities.CivLogger;
 
 @UtilityClass
 public class ForgeManager {
@@ -75,7 +76,10 @@ public class ForgeManager {
                         }
                         return forge;
                     });
-            forge.fromNBT(new NBTCompound(forgePDC));
+
+            NBTCompound compound = NBTSerialization.fromPDC(forgePDC);
+
+            forge.fromNBT(compound);
             //LOGGER.info("Forge at [" + forge.getLocation() + "] has been loaded.");
         }
     }

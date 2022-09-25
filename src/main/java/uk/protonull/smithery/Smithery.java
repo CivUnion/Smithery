@@ -13,7 +13,7 @@ import vg.civcraft.mc.civmodcore.ACivMod;
 
 public final class Smithery extends ACivMod {
 
-    private final CommandRegistrar commands = new CommandRegistrar(this);
+    private CommandRegistrar commandManager;
 
     @Override
     public void onEnable() {
@@ -26,7 +26,10 @@ public final class Smithery extends ACivMod {
             disable();
             return;
         }
-        this.commands.init();
+
+        commandManager = new CommandRegistrar(this);
+        commandManager.init();
+
         registerListener(new ForgeListener());
         registerListener(new AlloyListener());
         ForgeManager.loadAllForges();
@@ -38,7 +41,7 @@ public final class Smithery extends ACivMod {
         AlloyCombinations.clearCombinations();
         ForgeManager.saveAllForges();
         Config.reset();
-        this.commands.reset();
+        commandManager.reset();
     }
 
     public static @NotNull Smithery getInstance() {

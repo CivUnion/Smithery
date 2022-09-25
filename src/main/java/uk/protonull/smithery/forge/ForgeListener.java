@@ -29,7 +29,7 @@ import uk.protonull.smithery.config.Config;
 import uk.protonull.smithery.utilities.ActionHandler;
 import uk.protonull.smithery.utilities.AmountMap;
 import uk.protonull.smithery.utilities.Utilities;
-import vg.civcraft.mc.civmodcore.util.CivLogger;
+import vg.civcraft.mc.civmodcore.utilities.CivLogger;
 
 public final class ForgeListener implements Listener {
 

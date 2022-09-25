@@ -11,7 +11,7 @@ import uk.protonull.smithery.config.Config;
 import uk.protonull.smithery.forge.ForgeRecipe;
 import uk.protonull.smithery.utilities.Utilities;
 import vg.civcraft.mc.civmodcore.inventory.RecipeManager;
-import vg.civcraft.mc.civmodcore.util.CivLogger;
+import vg.civcraft.mc.civmodcore.utilities.CivLogger;
 
 @UtilityClass
 public class AlloyCombinations {
