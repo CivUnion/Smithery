@@ -12,7 +12,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.jetbrains.annotations.NotNull;
 import uk.protonull.smithery.utilities.PersistentDataTypes;
-import vg.civcraft.mc.civmodcore.serialization.NBTCompound;
+import vg.civcraft.mc.civmodcore.nbt.NBTSerialization;
+import vg.civcraft.mc.civmodcore.nbt.wrappers.NBTCompound;
 
 @UtilityClass
 public class ForgeUtils {
@@ -71,7 +72,7 @@ public class ForgeUtils {
      * @return Returns an NBT component for that furnace.
      */
     public @NotNull NBTCompound getFurnaceNBT(final @NotNull org.bukkit.block.Furnace furnace) {
-        return new NBTCompound(furnace.getPersistentDataContainer());
+        return NBTSerialization.fromPDC(furnace.getPersistentDataContainer());
     }
 
     /**

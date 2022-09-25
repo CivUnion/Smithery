@@ -5,7 +5,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;
 import uk.protonull.smithery.Smithery;
 import uk.protonull.smithery.forge.ForgeRecipe;
-import vg.civcraft.mc.civmodcore.util.CivLogger;
+import vg.civcraft.mc.civmodcore.utilities.CivLogger;
 
 public abstract class AbstractConfigParser {
 

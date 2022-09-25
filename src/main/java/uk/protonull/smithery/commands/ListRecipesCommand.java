@@ -1,5 +1,6 @@
 package uk.protonull.smithery.commands;
 
+import co.aikar.commands.BaseCommand;
 import co.aikar.commands.InvalidCommandArgument;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.CommandPermission;
@@ -25,10 +26,9 @@ import uk.protonull.smithery.alloys.AlloyUtils;
 import uk.protonull.smithery.config.Config;
 import uk.protonull.smithery.forge.ForgeRecipe;
 import uk.protonull.smithery.utilities.Utilities;
-import vg.civcraft.mc.civmodcore.command.AikarCommand;
 
 @CommandAlias(CommandRegistrar.ROOT_COMMAND_ALIAS)
-public final class ListRecipesCommand extends AikarCommand {
+public final class ListRecipesCommand extends BaseCommand {
 
     @Subcommand("list")
     @Description("Lists all known Forge recipes")

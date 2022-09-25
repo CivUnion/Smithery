@@ -23,7 +23,7 @@ import uk.protonull.smithery.forge.ForgeRecipe;
 import uk.protonull.smithery.utilities.AmountMap;
 import uk.protonull.smithery.utilities.ItemBuilder;
 import vg.civcraft.mc.civmodcore.inventory.items.MetaUtils;
-import vg.civcraft.mc.civmodcore.util.MoreArrayUtils;
+import vg.civcraft.mc.civmodcore.utilities.MoreArrayUtils;
 
 @UtilityClass
 public final class AlloyUtils {

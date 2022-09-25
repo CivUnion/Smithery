@@ -1,7 +1,9 @@
-name: ${project.name}
+name: ${pluginName}
 main: uk.protonull.smithery.Smithery
-version: ${project.version}
-api-version: 1.16
+author: Protonull
+version: ${version}
+description: ${description}
+api-version: ${api_version}
 depend: [CivModCore]
 permissions:
   smithery.admin:
